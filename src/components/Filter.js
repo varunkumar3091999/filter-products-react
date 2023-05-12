@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CategContext, selectedCategContext } from "../Containers/Products";
-import { Checkbox, Button } from "antd";
+import { Checkbox } from "antd";
 
 const Filter = ({ show, showHide }) => {
   const categories = useContext(CategContext);
