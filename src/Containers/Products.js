@@ -1,6 +1,7 @@
 import { useEffect, useState, createContext } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import LoadingScreen from "../components/LoadingScreen";
 
 export const CategContext = createContext();
 export const selectedCategContext = createContext();
@@ -10,6 +11,7 @@ const Products = () => {
   const [filteredProds, setFilteredProds] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("	https://dummyjson.com/products/categories")
@@ -33,14 +35,25 @@ const Products = () => {
   }, [selectedCategories]);
 
   const fetchProducts = () => {
+    setLoading(true);
     fetch("https://dummyjson.com/products?limit=100")
       .then((res) => res.json())
       .then((json) => {
         setProducts(json.products);
         setFilteredProds(json.products);
+        setLoading(false);
         console.log(json.products);
       });
   };
+
+  if (loading) {
+    return (
+      <div>
+        <Header />
+        <LoadingScreen />
+      </div>
+    );
+  }
 
   return (
     <CategContext.Provider
