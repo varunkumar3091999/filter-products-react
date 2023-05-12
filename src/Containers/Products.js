@@ -13,7 +13,7 @@ const Products = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("	https://dummyjson.com/products/categories")
+    fetch("https://dummyjson.com/products/categories")
       .then((res) => res.json())
       .then((cat) => {
         setCategories(cat);
