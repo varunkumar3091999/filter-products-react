@@ -4,7 +4,6 @@ import Header from "../components/Header";
 import LoadingScreen from "../components/LoadingScreen";
 
 export const CategContext = createContext();
-export const selectedCategContext = createContext();
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -18,12 +17,10 @@ const Products = () => {
       .then((res) => res.json())
       .then((cat) => {
         setCategories(cat);
-        console.log(cat);
       });
   }, []);
 
   useEffect(() => {
-    console.log(selectedCategories, "selected");
     if (selectedCategories.length > 0) {
       const prods = products.filter((elem) =>
         selectedCategories.includes(elem.category)
@@ -42,7 +39,6 @@ const Products = () => {
         setProducts(json.products);
         setFilteredProds(json.products);
         setLoading(false);
-        console.log(json.products);
       });
   };
 
@@ -64,9 +60,6 @@ const Products = () => {
         filteredProds,
       }}
     >
-      {/* <selectedCategContext.Provider
-        value={{ selectedCategories, setSelectedCategories }}
-      > */}
       <div className="products-container">
         <Header prodCount={filteredProds.length} />
         <div className="products-sub-container">
@@ -80,7 +73,7 @@ const Products = () => {
             <div className="products-list">
               {filteredProds.map((elem, i) => (
                 <div key={elem.id}>
-                  <img src={elem.images[0]} />
+                  <img src={elem.images[0]} alt="prodduct " />
                   <p className="price">${elem.price}</p>
                   <p className="product-title">{elem.title}</p>
                 </div>
@@ -90,7 +83,6 @@ const Products = () => {
           <Footer />
         </div>
       </div>
-      {/* </selectedCategContext.Provider> */}
     </CategContext.Provider>
   );
 };

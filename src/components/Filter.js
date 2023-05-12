@@ -1,26 +1,14 @@
-import { useContext, useEffect, useState } from "react";
-import { CategContext, selectedCategContext } from "../Containers/Products";
+import { useContext } from "react";
+import { CategContext } from "../Containers/Products";
 import { Checkbox } from "antd";
 
 const Filter = ({ show, showHide }) => {
-  const [availableProdCounts, setAvailableProdCounts] = useState();
   const {
     categories,
     selectedCategories,
     setSelectedCategories,
     filteredProds,
   } = useContext(CategContext);
-  // const { selectedCategories, setSelectedCategories } =
-  //   useContext(selectedCategContext);
-
-  // useEffect(() => {
-  //   console.log(selectedCategories, "djnkflvjnfmkdl");
-  //   selectedCategories.map((elem) => {
-  //     fetch(`https://dummyjson.com/products/category/${elem}`)
-  //       .then((res) => res.json())
-  //       .then((data) => console.log(data.products, "data"));
-  //   });
-  // }, [selectedCategories]);
 
   const selectCategory = (e, cat) => {
     const cats = [...selectedCategories];
