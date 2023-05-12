@@ -11,6 +11,7 @@ I made use of [DummyJSON](https://dummyjson.com/) for the mock data and integrat
 ## Demo
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9d5124f4-5dda-45ff-b80c-2c7e1939b6a3/deploy-status)](https://app.netlify.com/sites/celebrated-hotteok-36babb/deploys)
+
 The Web App has been deployed with the help of Netlify. Visit https://celebrated-hotteok-36babb.netlify.app/.
 
 ## Run Locally
@@ -24,7 +25,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd filter-products-react
 ```
 
 Install dependencies
