@@ -179,9 +179,6 @@ code {
     transition: transform 0.5s ease-in-out, top 0.5s ease-in-out,
       left 0.5s ease-in-out;
   }
-
-  .loading-container {
-  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -209,8 +206,6 @@ code {
 
   .categories-heading {
     margin-top: 0 !important;
-  }
-  .filter-show {
   }
 
   .footer-buttons {
