@@ -1,4 +1,4 @@
-# Neon - Front-End Task for Missan
+# Neon - Front-End Task for Missan IT Solutions
 
 A responsive React application for a product catalog with intuitive filters based on the product category.
 
