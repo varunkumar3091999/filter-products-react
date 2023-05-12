@@ -1,8 +1,7 @@
-const Header = ({ prodCount }) => {
+const Header = () => {
   return (
     <div className="header">
-      <div className="heading">Heading</div>
-      <div className="prod-count">{prodCount} products available</div>
+      <div className="heading">Header</div>
     </div>
   );
 };

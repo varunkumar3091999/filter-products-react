@@ -43,24 +43,41 @@ const Products = () => {
   };
 
   return (
-    <CategContext.Provider value={categories}>
-      <selectedCategContext.Provider
+    <CategContext.Provider
+      value={{
+        categories,
+        selectedCategories,
+        setSelectedCategories,
+        filteredProds,
+      }}
+    >
+      {/* <selectedCategContext.Provider
         value={{ selectedCategories, setSelectedCategories }}
-      >
-        <div className="products-container">
-          <Header prodCount={filteredProds.length} />
-          <div className="products-list">
-            {filteredProds.map((elem, i) => (
-              <div key={elem.id}>
-                <img src={elem.images[0]} />
-                <p className="price">${elem.price}</p>
-                <p className="product-title">{elem.title}</p>
+      > */}
+      <div className="products-container">
+        <Header prodCount={filteredProds.length} />
+        <div className="products-sub-container">
+          <div className="product-list-container">
+            <div className="products-heading-container">
+              <div className="heading">Products </div>
+              <div className="prod-count">
+                {`(${filteredProds.length} products available)`}
               </div>
-            ))}
+            </div>
+            <div className="products-list">
+              {filteredProds.map((elem, i) => (
+                <div key={elem.id}>
+                  <img src={elem.images[0]} />
+                  <p className="price">${elem.price}</p>
+                  <p className="product-title">{elem.title}</p>
+                </div>
+              ))}
+            </div>
           </div>
           <Footer />
         </div>
-      </selectedCategContext.Provider>
+      </div>
+      {/* </selectedCategContext.Provider> */}
     </CategContext.Provider>
   );
 };
