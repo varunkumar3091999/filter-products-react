@@ -8,6 +8,8 @@ I made use of [DummyJSON](https://dummyjson.com/) for the mock data and integrat
 
 [![image.png](https://i.postimg.cc/R0f9zLDs/image.png)](https://postimg.cc/2qzgQhmh)
 
+[![image.png](https://i.postimg.cc/4xf98wWg/image.png)](https://postimg.cc/ykGxxhqQ)
+
 ## Demo
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9d5124f4-5dda-45ff-b80c-2c7e1939b6a3/deploy-status)](https://app.netlify.com/sites/celebrated-hotteok-36babb/deploys)
